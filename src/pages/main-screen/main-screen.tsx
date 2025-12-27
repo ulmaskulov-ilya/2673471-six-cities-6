@@ -7,7 +7,7 @@ import Map from '../../components/map/map.tsx';
 import ListCities from '../../components/list-cities/list-cities.tsx';
 import {useAppSelector} from '../../hooks';
 import SortingOptions from '../../components/sorting-options/sorting-options.tsx';
-import {SortOption, SortOptionType} from '../../types/sortOption.type.ts';
+import {SortOption, SortOptionType} from '../../types/sort-option.type.ts';
 import {sortOffersByOption} from '../../const.ts';
 import LoadingSpinner from '../../components/loading-spinner/loading-spinner.tsx';
 import {getCity, getOffers, getOffersLoadingStatus} from '../../store/offers/selectors.ts';

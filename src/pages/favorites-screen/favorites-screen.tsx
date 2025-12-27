@@ -33,7 +33,7 @@ export default function FavoritesScreen(): JSX.Element {
       </div>
       <div className='favorites__places'>
         {groupedOffers.map((offer) => (
-          <MemoizedOffer offer={offer} key={offer.id} block='favorites' sizeImage='small' onCardHover={handleCardHover}></MemoizedOffer>
+          <MemoizedOffer offer={offer} key={offer.id} block='favorites' sizeImage='small' onCardHover={handleCardHover}/>
         ))}
       </div>
     </li>

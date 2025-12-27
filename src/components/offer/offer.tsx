@@ -1,5 +1,6 @@
 ﻿import {Link} from 'react-router-dom';
 import {memo} from 'react';
+import cn from 'classnames';
 import {AppRoute, getStars} from '../../const.ts';
 import {OfferType} from '../../types/offer.type.ts';
 import {useAppDispatch} from '../../hooks';
@@ -27,7 +28,8 @@ function Offer({offer, block, sizeImage, onCardHover}: OfferProps) {
     }));
   };
   return (
-    <article className={`${block}__card place-card`}
+    <article
+      className={`${block}__card place-card`}
       onMouseEnter={() => onCardHover(offer.id)}
       onMouseLeave={() => onCardHover(null)}
     >
@@ -39,7 +41,9 @@ function Offer({offer, block, sizeImage, onCardHover}: OfferProps) {
       }
       <div className={`${block}__image-wrapper place-card__image-wrapper`}>
         <Link to={`${AppRoute.Offer}/${offer.id}`}>
-          <img className='place-card__image' src={offer.previewImage} {...sizeImageRecord[sizeImage]}
+          <img
+            className='place-card__image'
+            src={offer.previewImage} {...sizeImageRecord[sizeImage]}
             alt={offer.title}
           />
         </Link>
@@ -51,7 +55,10 @@ function Offer({offer, block, sizeImage, onCardHover}: OfferProps) {
             <span className='place-card__price-text'>&#47;&nbsp;night</span>
           </div>
           <button
-            className={`place-card__bookmark-button button ${offer.isFavorite ? 'place-card__bookmark-button--active' : ''}`}
+            className={cn(
+              'place-card__bookmark-button',
+              'button',
+              {'place-card__bookmark-button--active': offer.isFavorite})}
             type='button'
             onClick={handleFavoriteClick}
           >

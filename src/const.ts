@@ -1,6 +1,6 @@
 ﻿import {CityEnum} from './types/city.enum.ts';
 import {OfferType} from './types/offer.type.ts';
-import {SortOption, SortOptionType} from './types/sortOption.type.ts';
+import {SortOption, SortOptionType} from './types/sort-option.type.ts';
 
 export enum AppRoute {
   Main = '/',

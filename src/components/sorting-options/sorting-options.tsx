@@ -1,6 +1,6 @@
 ﻿import {memo, useState} from 'react';
 import cn from 'classnames';
-import {SortOption, SortOptionType} from '../../types/sortOption.type.ts';
+import {SortOption, SortOptionType} from '../../types/sort-option.type.ts';
 
 type SortingOptionsProps = {
   currentOption: SortOptionType;
